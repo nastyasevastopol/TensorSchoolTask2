@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css"> 
+        <title>Tensor School</title>
+        <script defer src="js/index.js"></script>
+	</head>
+	<body>
+        <div class="wrapper">
+    		<header>
+                <div class="information">
+                    <img class="information__logo" src="img/logo.jpg" alt="Логотип компании Тензор"/>
+                    <div class="information__title title">Tensor School</div>
+                    <div class="information__subtitle">Это страница школы Тензор в городе Уфа. Тут вы можете познакомиться с нашими учениками и посмотреть темы занятий.</div>
+                </div>
+            </header>
+
+            <form class="form-edit-students">
+                <p class="form-edit-students__string">
+                    <label class="form-edit-students__label" for="input-fullname">Для поиска или удаления введите ФИО</label>
+                    <input class="form-edit-students__input" id="input-fullname" type = "text" placeholder="Введите ФИО человека">
+                </p>
+                <p class="form-edit-students__string">
+                    <input class="form-edit-students__button" type = "button" id="delete-button" name="delete-button" value="Отчислить/Уволить">
+                    <input class="form-edit-students__button" type = "button" id="find-button" name="find-button" value="Найти">
+                </p>
+            </form>
+
+            <div id="students-list" class="list">
+            </div>
+            <div id="teachers-list" class="list">
+                <div class="teachers-list__title title">Учителя</div>
+            </div>
+
+            <template class="template-card">
+                <div class="column" id="student">
+                    <img class="column__photo" src="img/ava01.jpg" alt="Фото ученика 1"/>
+                    <div class="column__title" title="Фамилия Имя">Фамилия Имя</div>
+                    <div class="column__subtitle" title="ВУЗ Курс">ВУЗ Курс</div>
+                </div>
+            </template>
+            <template class="template-info-window">
+                <div class="info-window">
+                    <img class="info-window__close-button" src="../img/close.png" alt="кнопка закрыть"/>
+                    <div class="info-window__container">
+                        <div class="info-window__data">
+                            <div class="info-window__title">Фамилия Имя</div>
+                            <div class="info-window__row">
+                                <p class="info-window__subtitle">День Рождения</p>
+                                <p class="info-window__information"></p>
+                            </div>
+                            <div class="info-window__row">
+                                <p class="info-window__subtitle info-window__subtitle_education">Учится</p>
+                                <p class="info-window__information info-window__information_education"></p>
+                            </div>
+                        </div>
+                        <img class="info-window__photo" src="img/ava01.jpg" alt="Фото человека"/>
+                    </div>
+                </div>
+            </template>
+            
+        </div>
+	</body>
+</html>
